@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  backend:
+    image: gakalmar/mybackend:v1
+    ports:
+      - "3000:3000"
+  frontend:
+    image: gakalmar/myfrontend:v1
+    ports:
+      - "5173:5173"
