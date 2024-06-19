@@ -1,7 +1,7 @@
 # Creature Coach Camp
 
 ### Description 
-- A gaming app, that let's you create a mythical creature and raise it by different interaction methods:
+- A gaming app, that lets you create a mythical creature and raise it by different interaction methods:
 - Interaction types:
     - **Send on quest** makes your creature gain `gold`, but reduces `mood`
     - **Training** makes your creature gain `XP` but reduce `HP`
