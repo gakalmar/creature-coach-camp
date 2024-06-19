@@ -1,0 +1,140 @@
+.quest-cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.quest-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 25px;
+    padding: 25px 10px 10px 10px;
+    cursor: pointer;
+
+    width: 400px;
+    background-color: rgba(48, 46, 46, 0.73);
+    border-radius: 12px;
+}
+
+.quest-card:hover {
+    border: 1px solid gold;
+    background-color: rgb(48, 46, 46);
+}
+
+.quest-card h2 {
+    height: 60px;
+    color: rgb(213, 187, 38);
+    margin: 15px
+}
+
+.quest-card h3 {
+    height: 50px;
+    color: rgb(136, 39, 136);
+}
+
+.quest-card p {
+    color: rgb(145, 131, 131);
+    margin-bottom: 5px;
+}
+
+.quest-container {
+    height: 200px;
+    align-items: center;
+}
+
+.quest-details-container {
+    height: 50px;
+    display: flex;
+    align-items: end;
+    color: rgb(5, 155, 5);
+}
+
+.quest-card img {
+    width: 350px;
+    height: auto;
+}
+
+.button-holder {
+    display: flex;
+    justify-content: center;
+}
+
+.return-btn {
+    align-self: center;
+    margin-top: 25px;
+    padding: 15px;
+    cursor: pointer;
+
+    width: fit-content;
+    border-radius: 12px;
+    background-color: rgb(139, 28, 28);
+    border: 2px solid black;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.selected-quest-card {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    padding: 15px;
+
+    background-color: rgba(48, 46, 46, 0.73);
+    border-radius: 12px;
+}
+
+.selected-quest-card img {
+    height: 650px;
+    width: auto;
+}
+
+.selected-quest-card h2 {
+    height: 30px;
+    color: rgb(213, 187, 38);
+    margin-top: 10px;
+    margin-bottom: auto;
+}
+
+.selected-quest-card h3 {
+    height: 20px;
+    color: rgb(136, 39, 136);
+    margin-bottom: 10px;
+    margin-top: auto;
+}
+
+.selected-quest-card p {
+    color: rgb(145, 131, 131);
+    margin-bottom: 5px;
+}
+
+.quest-timer {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+
+    color: red;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.finish-quest-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.finish-btn {
+    width: 110px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: rgb(225, 104, 17);
+    border: 2px solid black;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+}
