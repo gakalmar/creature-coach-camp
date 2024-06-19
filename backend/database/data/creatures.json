@@ -1,0 +1,74 @@
+[
+    {
+        "species": "chupacabra",
+        "image": "",
+        "home_location": "Mystical Woods",
+        "userinput": {
+            "name": "",
+            "gender": ""
+        },
+        "stats": {
+            "level": 1,
+            "xp": 0,
+            "current_hp": 100,
+            "max_hp": 100,
+            "gold": 0,
+            "mood": 50
+        },
+        "items": []
+    },
+    {
+        "species": "unicorn",
+        "image": "",
+        "home_location": "Enchanted Forest",
+        "userinput": {
+            "name": "",
+            "gender": ""
+        },
+        "stats": {
+            "level": 1,
+            "xp": 0,
+            "current_hp": 100,
+            "max_hp": 100,
+            "gold": 0,
+            "mood": 50
+        },
+        "items": []
+    },
+    {
+        "species": "gryph",
+        "image": "",
+        "home_location": "Desert of Secrets",
+        "userinput": {
+            "name": "",
+            "gender": ""
+        },
+        "stats": {
+            "level": 1,
+            "xp": 0,
+            "current_hp": 100,
+            "max_hp": 100,
+            "gold": 0,
+            "mood": 50
+        },
+        "items": []
+    },
+    {
+        "species": "dragon",
+        "image": "",
+        "home_location": "Crystal Caves",
+        "userinput": {
+            "name": "",
+            "gender": ""
+        },
+        "stats": {
+            "level": 1,
+            "xp": 0,
+            "current_hp": 100,
+            "max_hp": 100,
+            "gold": 0,
+            "mood": 50
+        },
+        "items": []
+    }
+]

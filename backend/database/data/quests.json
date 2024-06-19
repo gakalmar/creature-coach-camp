@@ -1,0 +1,89 @@
+[
+    {
+        "name": "Uncover the Lost City",
+        "location": "Desert of Secrets",
+        "description": "Embark on an arduous expedition into the vast Desert of Secrets to uncover the long-lost ancient city buried beneath the sands.",
+        "quest_duration": 3,
+        "image_url": "",
+        "reward_gold": 30,
+        "reward_xp": 3,
+        "hp_loss": -10
+    },
+    {
+        "name": "Guardian of the Mystic Grove",
+        "reward": 120,
+        "location": "Enchanted Forest",
+        "description": "The mystical creatures of the Enchanted Forest are in danger. Stand guard as the temporary protector and ensure the safety of the sacred Mystic Grove.",
+        "quest_duration": 2,
+        "image_url": "",
+        "reward_gold": 30,
+        "reward_xp": 3,
+        "hp_loss": -10
+    },
+    {
+        "name": "Go Hunting",
+        "reward": 50,
+        "location": "Mystical Woods",
+        "description": "Venture into the mysterious and dangerous forest to hunt exotic creatures.",
+        "quest_duration": 10,
+        "image_url": "",
+        "reward_gold": 30,
+        "reward_xp": 3,
+        "hp_loss": -10
+    },
+    {
+        "name": "Retrieve the Crystal Shard",
+        "reward": 100,
+        "location": "Crystal Caves",
+        "description": "Embark on a perilous journey into the Crystal Caves to retrieve a valuable crystal shard.",
+        "quest_duration": 2,
+        "image_url": "",
+        "reward_gold": 30,
+        "reward_xp": 3,
+        "hp_loss": -10
+    },
+    {
+        "name": "Rescue the Enchanted Griffin",
+        "reward": 75,
+        "location": "Mighty Mountains",
+        "description": "A majestic Griffin is in distress. Journey to the Mystical Mountains and rescue the enchanted creature from a magical trap.",
+        "quest_duration": 3,
+        "image_url": "",
+        "reward_gold": 30,
+        "reward_xp": 3,
+        "hp_loss": -10
+    },
+    {
+        "name": "Retrieve the Frozen Relic",
+        "reward": 120,
+        "location": "Eternal Ice Peaks",
+        "description": "Brave the chilling winds and treacherous terrain of the Eternal Ice Peaks to retrieve a mysterious frozen relic.",
+        "quest_duration": 4,
+        "image_url": "",
+        "reward_gold": 30,
+        "reward_xp": 3,
+        "hp_loss": -10
+    },
+    {
+        "name": "Uncover the Secrets of the Whispering Swamps",
+        "reward": 80,
+        "location": "Whispering Swamps",
+        "description": "Explore the mystical Whispering Swamps and uncover the ancient secrets hidden within the eerie mist.",
+        "quest_duration": 2,
+        "image_url": "",
+        "reward_gold": 30,
+        "reward_xp": 3,
+        "hp_loss": -10
+    },
+    {
+        "name": "Ascend the Celestial Tower",
+        "reward": 150,
+        "location": "Celestial Plateau",
+        "description": "Embark on a challenging journey to ascend the mystical Celestial Tower and claim a legendary artifact at its summit.",
+        "quest_duration": 5,
+        "image_url": "./images/quests/celestial_plateau.jpg",
+        "reward_gold": 30,
+        "reward_xp": 3,
+        "hp_loss": -10
+    }
+]
