@@ -10,22 +10,17 @@ import Hero from './database/models/HeroModel.js'
 import Quests from './database/models/QuestModel.js'
 import UserModel from "./database/models/UserModel.js";
 
-
-// Construct directory path
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Config files
 dotenv.config({
     path: path.join(__dirname, './config/.env'),
     override: true,
 });
 const dbUrl = process.env.DB_URL;
 
-// Create app  express instance
 const app = express();
 
-// Middlewares
 app.use(express.json())
 app.use(express.static('public'))
 
@@ -35,8 +30,6 @@ app.use((req, _, next) => {
     next()
 })
 
-
-// Endpoints
 app.get('/api/v1/welcome', (req, res) => {
     try {
         res.status(200).json({ message: "Hello world" })
@@ -114,7 +107,6 @@ app.get('/api/v1/quests/:id', async (req, res) => {
     }
 })
 
-
 app.get('/api/v1/hero/:loggedIn/:_id', async (req, res) => {
 
     try {
@@ -185,11 +177,9 @@ app.post('/api/v1/hero', async (req, res) => {
 
 app.patch('/api/v1/heroAction/', async (req, res) => {
     try {
-        //Extract data from the request
         const { _id, updateProperties } = req.body
         const { positive_effect, positive_value, negative_effect, negative_value } = updateProperties
 
-        // Validation for stats
         if (positive_effect === "gold" ||
             positive_effect === "mood" ||
             positive_effect === "current_hp" ||
@@ -199,7 +189,6 @@ app.patch('/api/v1/heroAction/', async (req, res) => {
             negative_effect === "current_hp" ||
             negative_effect === "xp") {
 
-            // Extract data from the database
             const user = await UserModel.findById(_id)
             const hero = user.creature
             const maxHP = hero.stats.max_hp
@@ -210,32 +199,26 @@ app.patch('/api/v1/heroAction/', async (req, res) => {
             let positiveUpdate = hero.stats[positive_effect] + positive_value
             let negativeUpdate = hero.stats[negative_effect] + negative_value
 
-            // Validation before updates
             if ((positiveUpdate > maxHP) && positive_effect === "current_hp") positiveUpdate = 100;
             if (negative_effect === 'mood' && mood < Math.abs(negative_value)) return res.status(202).json({ message: `Not enough mood to train :(` });
             if (negative_effect === 'gold' && gold < Math.abs(negative_value)) return res.status(202).json({ message: `Not enough gold to buy food! \nSad ${hero.species} noises :(` });
 
-            // Modify and save data on the database
             hero.stats[positive_effect] = positiveUpdate
             hero.stats[negative_effect] = negativeUpdate
             await user.save()
 
-            // Backend log messages (might use some logger program later)
             console.log(`Response sent!\nAltered Hero:\n${hero}`);
 
-            // Response send on success
             return res.status(200).json({
                 message: (currentHP === 100 && positive_effect === "current_hp") ?
                     "Your hero is at full hp" :
                     "Success"
             })
         }
-        // Response send on validation error and backend logs
         console.log(`Bad request!\nError: Validation failed, ${positive_effect} or ${negative_effect} is not an existing stat`);
         return res.status(400).json({ message: "Bad request" })
 
     } catch (error) {
-        // Response send on any other error and backend logs
         console.log(error);
         return res.status(500).json({ message: "Some error occured" })
     }
@@ -243,16 +226,13 @@ app.patch('/api/v1/heroAction/', async (req, res) => {
 
 app.patch('/api/v1/questAction/', async (req, res) => {
     try {
-        //Extract data from the request
         const { _id, updateProperties } = req.body
         const { quest_positive_effect_one, quest_positive_value_one, quest_positive_effect_two, quest_positive_value_two, quest_negative_effect, quest_negative_value } = updateProperties
 
-        // Validation for stats
         if (quest_positive_effect_one === "gold" &&
             quest_positive_effect_two === "xp" &&
             quest_negative_effect === "current_hp") {
 
-            // Extract data from the database
             const user = await UserModel.findById(_id)
             const hero = user.creature
 
@@ -260,24 +240,19 @@ app.patch('/api/v1/questAction/', async (req, res) => {
             let xpUpdate = hero.stats[quest_positive_effect_two] + quest_positive_value_two;
             let hpUpdate = hero.stats[quest_negative_effect] + quest_negative_value;
 
-            // Modify and save data on the database
             hero.stats[quest_positive_effect_one] = goldUpdate
             hero.stats[quest_positive_effect_two] = xpUpdate
             hero.stats[quest_negative_effect] = hpUpdate
             await user.save()
 
-            // Backend log messages (might use some logger program later)
             console.log(`Response sent!\nAltered Hero:\n${hero}`);
 
-            // Response send on success
             return res.status(200).json({ message: "Success" });
         }
-        // Response send on validation error and backend logs
         console.log(`Bad request!`);
         return res.status(400).json({ message: "Bad request" })
 
     } catch (error) {
-        // Response send on any other error and backend logs
         console.log(error);
         return res.status(500).json({ message: "Some error occured" })
     }
@@ -305,7 +280,6 @@ app.patch(`/api/v1/updateCreature/:id`, async (req, res) => {
     }
 })
 
-//Timi
 app.post(`/api/v1/newCreature`, async (req, res) => {
     try {
         const newCreature = new Creature({    
@@ -369,7 +343,6 @@ app.patch(`/api/v1/updateQuest/:id`, async (req, res) => {
     }
 })
 
-//Timi
 app.post(`/api/v1/newQuest`, async (req, res) => {
     try {
         const newQuest = new Quests({
@@ -429,7 +402,6 @@ app.get("/api/v1/user/:_id", async (req, res) => {
     }
 })
 
-// Main
 async function main() {
     await mongoose.connect(dbUrl)
     app.listen(3000, () => {

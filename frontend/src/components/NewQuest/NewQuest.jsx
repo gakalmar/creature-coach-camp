@@ -6,7 +6,6 @@ export default function NewQuest() {
 
     const navigate = useNavigate();
 
-    //const [loading, setLoading] = useState(true);
     const [values, setValues] = useState({
         name: "",
         location: "",
@@ -47,8 +46,6 @@ export default function NewQuest() {
             console.log("Error happened during adding new quest", error)
         }
     }
-
-    //if (loading) return <div>Loading...</div>
 
     return (
         <div className="editer-container">

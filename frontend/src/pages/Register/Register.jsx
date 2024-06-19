@@ -5,14 +5,11 @@ import './Register.css';
 import postUser from '../../services/postUser';
 export default function Register({ setUser, user }) {
 
-    //Feature hooks
     const navigate = useNavigate();
 
-    //States
     const [userName, setUserName] = useState("");
     const [userPassword, setUserPassword] = useState("");
 
-    //Event handlers
     async function handleRegister(e) {
         e.preventDefault()
         const messageBody = { user_name: userName, user_password: userPassword };

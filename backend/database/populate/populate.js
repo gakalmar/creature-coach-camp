@@ -9,7 +9,7 @@ import HeroModel from "../models/HeroModel.js";
 
 
 const __filename = fileURLToPath(import.meta.url); 
-const __dirname = path.dirname(__filename); // gets the directory part of the file's absolute path.
+const __dirname = path.dirname(__filename);
 
 dotenv.config({
   path: path.join(__dirname, '../../config/.env'),
@@ -17,7 +17,6 @@ dotenv.config({
 });
 const dbUrl = process.env.DB_URL;
 
-// Populate functions
 async function populateCreatures() {
   const creatureFilePath = path.join(
     __dirname,
@@ -49,13 +48,11 @@ async function resetHero() {
   await HeroModel.deleteMany({});
 }
 
-// Main function to connect to db and populate
 async function main() {
   try {
     
     await mongoose.connect(dbUrl);
 
-    // Here we can call the populate functions
     await populateCreatures();
     await populateQuests();
     await resetHero()

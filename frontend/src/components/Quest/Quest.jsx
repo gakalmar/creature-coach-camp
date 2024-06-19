@@ -71,7 +71,7 @@ export default function Quest({ quests, setQuests, user, hero }) {
                     <p>{selectedQuest.description}</p>
                     {countdown === '0:0' ?
                         <div className='finish-quest-container'>
-                            <button className='finish-btn' onClick={() => handleFinishQuest(selectedQuest)}>Finsih Quest</button>
+                            <button className='finish-btn' onClick={() => handleFinishQuest(selectedQuest)}>Finish Quest</button>
                         </div>
                         :
                         <span className='quest-timer'>{countdown}</span>}

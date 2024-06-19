@@ -5,14 +5,11 @@ import loginUser from '../../services/loginUser';
 import { useNavigate } from 'react-router-dom';
 export default function Login({ setUser, user }) {
 
-    //Feature hooks
     const navigate = useNavigate();
 
-    //States
     const [userName, setUserName] = useState("");
     const [userPassword, setUserPassword] = useState("");
 
-    //Event handlers
     async function handleLogin(e) {
         e.preventDefault()
         const messageBody = { user_name: userName, user_password: userPassword };

@@ -6,7 +6,6 @@ export default function NewCreature() {
 
     const navigate = useNavigate();
 
-    //const [loading, setLoading] = useState(true);
     const [values, setValues] = useState({
         species: "",
         image: "",
@@ -61,8 +60,6 @@ export default function NewCreature() {
             console.log("Error happened during adding new creature", error)
         }
     }
-
-    //if (loading) return <div>Loading...</div>
 
     return (
         <div className="editer-container">

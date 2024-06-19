@@ -30,8 +30,6 @@ const userSchema = new Schema({
     }
 });
 
-// Static methods
-
 userSchema.statics.signup = async function (user_name, password) {
 
     if (!user_name || !password) {

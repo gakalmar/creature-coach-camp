@@ -5,7 +5,7 @@ const questSchema = mongoose.Schema({
     location: { type: String, required: true },
     description: { type: String, required: true },
     quest_duration: { type: Number, required: true },
-    // New properties:
+    
     image_url: { type: String, required: false },
     reward_gold: { type: Number, required: true },
     reward_xp: { type: Number, required: true },
