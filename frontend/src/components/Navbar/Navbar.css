@@ -1,0 +1,24 @@
+.navbar {
+    background-color: rgb(48, 46, 46);
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo img {
+    width: 40px;
+    height: auto;
+    margin: 5px;
+}
+
+.navbar-links a {
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: 800;
+    color: white;
+}
+
+.navbar-links a:hover {
+    color: rgb(225, 104, 17)
+}

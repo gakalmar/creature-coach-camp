@@ -1,0 +1,11 @@
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.home-container img {
+    height: 800px;
+    width: auto;
+}
