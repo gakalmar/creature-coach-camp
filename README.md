@@ -14,3 +14,8 @@
     - **Backend:** Express
     - **Frontend:** React
     - **Runtime:** Node.js
+
+### Start the app
+- Start locally:
+    - In the backend folder: `npm start`
+    - In the frontend folder: `npm run dev`
