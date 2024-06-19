@@ -1,0 +1,11 @@
+.create-btn {
+    width: 180px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 12px;
+    background-color: rgb(225, 104, 17);
+    border: 2px solid black;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+}
