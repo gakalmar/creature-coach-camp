@@ -19,3 +19,8 @@
 - Start locally:
     - In the backend folder: `npm start`
     - In the frontend folder: `npm run dev`
+
+- Use containerized version:
+    - Create `.env` file in `./backend/config` folder to store your database connection string:
+        - `DB_URL = '<YOUR_CONNECTION_STRING>'`
+    - Run `docker-compose up`
