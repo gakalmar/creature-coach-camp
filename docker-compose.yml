@@ -4,6 +4,8 @@ services:
     image: gakalmar/creature-coach-camp-backend:v2
     ports:
       - "3000:3000"
+    env_file:
+      - .env
   frontend:
     image: gakalmar/creature-coach-camp-frontend:v2
     ports:
