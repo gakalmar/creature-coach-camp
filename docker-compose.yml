@@ -10,7 +10,7 @@ services:
     networks: 
       - node-network
     volumes: 
-      - ./node:/usr/src/app
+      - ./backend:/usr/src/app
       - /usr/src/app/node_modules
     tty: true
     ports: 
@@ -25,7 +25,7 @@ services:
     networks: 
       - node-network
     volumes: 
-      - ./react:/usr/src/app
+      - ./frontend:/usr/src/app
       - /usr/src/app/node_modules
     tty: true
     ports: 
